@@ -24,10 +24,9 @@ ActiveRecord::Schema.define(version: 20160409090735) do
 
   create_table "questions", force: :cascade do |t|
     t.string   "title"
-    t.string   "right_answer"
-    t.string   "wrong_answer"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

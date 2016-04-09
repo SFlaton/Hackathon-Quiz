@@ -1,19 +1,14 @@
-<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Questions</strong>
   <%= @question.title %>
 </p>
 
 <p>
-  <strong>Right answer:</strong>
-  <%= @question.right_answer %>
+  <strong>Question:</strong>
+  <%= @question.content %>
 </p>
 
-<p>
-  <strong>Wrong answer:</strong>
-  <%= @question.wrong_answer %>
-</p>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
+
 <%= link_to 'Back', questions_path %>
