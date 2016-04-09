@@ -1,0 +1,20 @@
+<h1>results</h1>
+
+<% if @correct %>
+  <h2>That's Correct!</h2>
+  <div style="background-color:green;", size="550x550">
+
+  <%= image_tag("smile", size: "500x350", color: "green") %>
+  </div>
+<% else %>
+  <div style="background-color:red;", size="550x550">
+  <h2>That's not right!</h2>
+  <%= image_tag("sad", size: "500x350", color: "red") %>
+  </div>
+<% end %>
+
+<% if @next_question %>
+  <%= link_to 'Next question', @next_question %>
+<% else %>
+  <%= link_to 'Done', questions_path %>
+<% end %>

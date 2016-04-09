@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
   def homepage
-    
+
   end
   # GET /questions
   # GET /questions.json
@@ -12,8 +12,19 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
+    @question = Question.find(params[:id])
   end
 
+  def results
+    score_from_user = params[:score].to_i
+
+    # look for the question
+    # check its answer
+    # if answer.score == score_from_user
+    @question = Question.find(params[:id])
+    @correct = @question.answer.score == score_from_user
+    @next_question = Question.where("id > ?", @question.id).order(id: :asc).first
+  end
   # GET /questions/new
   def new
     @question = Question.new
