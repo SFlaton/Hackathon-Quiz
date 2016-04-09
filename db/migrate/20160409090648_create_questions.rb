@@ -2,8 +2,7 @@ class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
       t.string :title
-      t.string :right_answer
-      t.string :wrong_answer
+      t.string :content
 
       t.timestamps null: false
     end

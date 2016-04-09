@@ -1,8 +1,8 @@
 class CreateAnswers < ActiveRecord::Migration
   def change
     create_table :answers do |t|
-      t.integer :score
-      t.references :question, index: true, foreign_key: true
+      t.integer :content
+      t.integer :question_id, index: true, foreign_key: true
 
       t.timestamps null: false
     end
