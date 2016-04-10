@@ -1,14 +1,29 @@
+<div class="text">
 <h1>results</h1>
+</div>
+
 
 <% if @correct %>
+<div class="text">
   <h2>That's Correct!</h2>
-  <div style="background-color:green;", size="550x550">
+  </div>
+  <style>
+body {background-color: green !important;}
+  </style>
+  <div style="background-color:green;", size="550x550", class="picture">
 
-  <%= image_tag("smile", size: "500x350", color: "green") %>
+  <%= image_tag("smile", size: "500x350", color: "green")%>
   </div>
 <% else %>
-  <div style="background-color:red;", size="550x550">
+
+<style>
+body {background-color: red !important;}
+</style>
+
+<div class="text">
   <h2>That's not right!</h2>
+</div>
+  <div style="background-color:red;", size="550x550">
   <%= image_tag("sad", size: "500x350", color: "red") %>
   </div>
 <% end %>

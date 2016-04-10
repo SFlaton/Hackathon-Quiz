@@ -10,7 +10,13 @@
 </p>
 
 
-<%= link_to "True", results_question_path(@question, score: 1) %>
-<%= link_to "False", results_question_path(@question, score: 0) %>
+<div class="buttons">
+<%= link_to "True", results_question_path(@question, score: 1), id:"true", class:"shadow" %>
+</div>
 
-<%= link_to 'Back', questions_path %>
+<div class="buttons">
+<%= link_to "False", results_question_path(@question, score: 0), id:"false", class:"shadow" %>
+</div>
+<div class="buttons">
+<%= link_to 'Back', questions_path, id:"buttonback", class:"shadow" %>
+</div>
